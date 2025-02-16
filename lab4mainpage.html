@@ -3,9 +3,10 @@
 
         <style>
             .mainbox{
-                background-color: blue;
+                background-color: plum;
                 border: solid 5px black;
                 width: 40%;
+                text-align: center;
                 
             }
 
@@ -18,8 +19,21 @@
         <!-- first box row-->
         <div id = "flexing">
             <div style = "margin-right: 5px;" class="mainbox">
-                <p>uhh</p>
+                <form style = "margin-top: 10px" name = "nameForm" onsubmit="return alertThem()">
+                    <label  for = "firstName">First Name:</label>
+                    <input type ="text" placeholder="Justin" id = "firstName" required>
+                    <button>Alert Me</button>
+                </form>
             </div>
+        <!-- alert js-->
+        <script type = "text/javascript">
+            function alertThem(){
+                    alert("Hi " + document.getElementById("firstName").value + "!")
+                    return false
+            }
+        </script>
+
+
 
             <div class = "mainbox">
                 <aside>
