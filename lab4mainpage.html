@@ -31,8 +31,8 @@
         <!-- alert js-->
         <script type = "text/javascript">
             function alertThem(){
-                    alert("Hi " + document.getElementById("firstName").value + "!")
-                    return false
+                    alert("Hi " + document.getElementById("firstName").value + "!");
+                    return false;
             }
         </script>
         <!--First row change color box-->
@@ -51,14 +51,33 @@
                 }else{
                     document.body.style.backgroundColor = "green";
                 }
+                return false;
             }
         </script>
 
         <!-- second box row-->
         <div id = "flexing">
             <div style = "margin-right: 5px;" class="mainbox">
-                <p>uhh</p>
+                <form style = "margin-top: 10px" name = "nameForm" onsubmit="return textValidator()">
+                    <label  for = "valText">Text Tester</label>
+                    <input type ="text" placeholder="Text to Validate" id = "valText" required>
+                    <button>Validate Text</button>
+                </form>
             </div>
+
+        <!--validator js-->
+        <script type = "text/javascript">
+            function textValidator(){
+                var validationReg = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+                if (validationReg.test(document.getElementById("valText").value)) {
+                    console.log("validating")
+                    alert("Invalid Character(s)")
+                }else{
+                    alert("No Special Character(s)")
+                }
+            return false;
+            }
+        </script>
 
             <div class = "mainbox">
                 <aside>
