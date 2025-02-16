@@ -3,4 +3,4 @@
 
 # Name (Please Input your name): Richard Salters
 
-# Comments: 
+# Comments: unsure why, but the background color button needs to be clicked twice before it works as instructions intend.

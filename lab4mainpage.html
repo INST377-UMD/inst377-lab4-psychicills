@@ -2,6 +2,9 @@
     <title>Lab 4 - Richard</title>
 
         <style>
+            body{
+                background-color: green;
+            }
             .mainbox{
                 background-color: plum;
                 border: solid 5px black;
@@ -35,13 +38,21 @@
         <!--First row change color box-->
             <div class = "mainbox">
                 <aside>
-                    <p>aside</p>
+                    <button style = "margin-top: 10px" onclick="changeColor()"> change color </button> 
                 </aside>
 
             </div>
         </div>
         <!--change color js-->
-        <script></script>
+        <script type = "text/javascript">
+            function changeColor(){
+                if(document.body.style.backgroundColor == "green"){
+                    document.body.style.backgroundColor = "blue";
+                }else{
+                    document.body.style.backgroundColor = "green";
+                }
+            }
+        </script>
 
         <!-- second box row-->
         <div id = "flexing">
