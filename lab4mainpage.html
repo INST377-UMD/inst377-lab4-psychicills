@@ -17,7 +17,9 @@
                 display: flex;
             }
         </style>
-
+    <head>
+        <h1 id = "headAdd">uhhhhh</h1>
+    </head>
     <body>
         <!-- first box row-->
         <div id = "flexing">
@@ -81,12 +83,18 @@
 
             <div class = "mainbox">
                 <aside>
-                    <p>aside</p>
+                    <button style = "margin-top: 10px" onclick="return textAdder()">Add Text</button>
                 </aside>
 
             </div>
         </div>
+        <!--add text js-->
+        <script type = "text/javascript">
+            function textAdder(){
+                document.getElementById("headAdd").textContent += " Add Text";
+            }
 
+        </script>
     </body>
 
 </html>
