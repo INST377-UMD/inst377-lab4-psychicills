@@ -1,0 +1,100 @@
+<html>
+    <title>Lab 4 - Richard</title>
+
+        <style>
+            body{
+                background-color: green;
+            }
+            .mainbox{
+                background-color: plum;
+                border: solid 5px black;
+                width: 40%;
+                text-align: center;
+                
+            }
+
+            #flexing{
+                display: flex;
+            }
+        </style>
+    <head>
+        <h1 id = "headAdd">INST377 Lab 4</h1>
+    </head>
+    <body>
+        <!-- first box row-->
+        <div id = "flexing">
+            <div style = "margin-right: 5px;" class="mainbox">
+                <form style = "margin-top: 10px" name = "nameForm" onsubmit="return alertThem()">
+                    <label  for = "firstName">Name:</label>
+                    <input type ="text" placeholder="Justin" id = "firstName" required>
+                    <button>Alert Me</button>
+                </form>
+            </div>
+        <!-- alert js-->
+        <script type = "text/javascript">
+            function alertThem(){
+                    alert("Hi " + document.getElementById("firstName").value + "!");
+                    return false;
+            }
+        </script>
+        <!--First row change color box-->
+            <div class = "mainbox">
+                <aside>
+                    <button style = "margin-top: 10px" onclick="changeColor()"> change color </button> 
+                </aside>
+
+            </div>
+        </div>
+        <!--change color js-->
+        <script type = "text/javascript">
+            function changeColor(){
+                if(document.body.style.backgroundColor == "green"){
+                    document.body.style.backgroundColor = "blue";
+                }else{
+                    document.body.style.backgroundColor = "green";
+                }
+                return false;
+            }
+        </script>
+
+        <!-- second box row-->
+        <div id = "flexing">
+            <div style = "margin-right: 5px;" class="mainbox">
+                <form style = "margin-top: 10px" name = "nameForm" onsubmit="return textValidator()">
+                    <label  for = "valText">Text Tester:</label>
+                    <input type ="text" placeholder="Text to Validate" id = "valText" required>
+                    <button>Validate Text</button>
+                </form>
+            </div>
+
+        <!--validator js-->
+        <script type = "text/javascript">
+            function textValidator(){
+                var validationReg = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+                if (validationReg.test(document.getElementById("valText").value)) {
+                    console.log("validating")
+                    alert("Invalid Character(s)")
+                }else{
+                    alert("No Special Character(s)")
+                }
+            return false;
+            }
+        </script>
+
+            <div class = "mainbox">
+                <aside>
+                    <button style = "margin-top: 10px" onclick="return textAdder()">Add Text</button>
+                </aside>
+
+            </div>
+        </div>
+        <!--add text js-->
+        <script type = "text/javascript">
+            function textAdder(){
+                document.getElementById("headAdd").textContent += " Add Text";
+            }
+
+        </script>
+    </body>
+
+</html>
